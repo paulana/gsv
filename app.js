@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var describe = require('describe.js');
-var manifest = require('manifest.js');
+var describe = require('describe');
+var manifest = require('manifest');
 
 var app = express();
 

@@ -14,6 +14,7 @@ function generate(url) {
             }
         }
     }
+    req.send();
 
     var output;
     data.dataset.forEach(function (d) {
