@@ -1,0 +1,50 @@
+html, body{
+  height: 100%;
+}
+
+#masthead-homepage{
+  margin: 2rem 0;
+}
+
+#main-content{
+  margin-top: 4rem;
+  height: 100%;
+}
+
+.page{
+  display: none;
+}
+
+#page-data{
+  display: block;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  display: inline-block;
+  padding: 10px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #0071bc;
+}
+.inputfile:focus + label{
+  cursor: pointer; /* "hand" cursor */
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+#response-success, #response-warning, #response-error{
+  display: none;
+}
