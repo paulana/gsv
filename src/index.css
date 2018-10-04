@@ -1,4 +1,7 @@
-html, body{
+@import url("node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+@import url("node_modules/uswds/dist/css/uswds.min.css");
+
+html, body {
   height: 100%;
 }
 
@@ -7,8 +10,7 @@ html, body{
 }
 
 #main-content{
-  margin-top: 4rem;
-  height: 100%;
+  height: calc(100% - 363px);
 }
 
 .page{
@@ -47,4 +49,11 @@ html, body{
 
 #response-success, #response-warning, #response-error{
   display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

@@ -1,3 +1,7 @@
+$ = require('jquery');
+require('@fortawesome/fontawesome-free');
+require('uswds');
+
 $(function(){
   $('#load-data').on('click', function(){
     $('.page').slideUp();
@@ -9,9 +13,9 @@ $(function(){
     $('#page-about').slideDown();
   });
 
-  $('#file').on('change', function(){
+  $('#data-url').on('change', function(){
     $.ajax({
-      url: 'foo',
+      url: '',
       method: 'POST',
       success: function(){
         $('#response-success').slideDown();
