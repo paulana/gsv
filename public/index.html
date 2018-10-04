@@ -72,7 +72,7 @@
       <h2 class="usa-heading">Load Data</h2>
       <div>
         <label for="data-url">Enter a URL here:</label>
-        <input id="data-url" type="url">
+        <input id="data-url" type="url" value="https://data.cdc.gov/Motor-Vehicle/Motor-Vehicle-Occupant-Death-Rate-by-Age-and-Gende/rqg5-mkef"></input>
         <button id="data-submit" class="usa-button">Go!</button>
       </div>
 
@@ -92,12 +92,99 @@
 
       <div class="usa-grid">
         <div id="data-report-wrapper" class="usa-width-one-half">
-          <div id="data-report">Additional Information about your data</div>
+          <pre id="data-report">
+{
+ "accessLevel": "public",
+ "landingPage": "https://data.cdc.gov/d/rqg5-mkef",
+ "bureauCode": ["009:00"],
+ "issued": "2016-10-17",
+ "@type": "dcat:Dataset",
+ "modified": "2017-10-23",
+ "keyword": ["death rate", "motor vehicle"],
+ "contactPoint": {
+   "@type": "vcard:Contact",
+   "fn": "CDC INFO",
+   "hasEmail": "mailto:cdcinfo@cdc.gov"
+ },
+ "publisher": {
+   "@type": "org:Organization",
+   "name": "data.cdc.gov"
+ },
+ "identifier": "https://data.cdc.gov/api/views/rqg5-mkef",
+ "description": "Rate of deaths by age/gender (per 100,000 population) for motor vehicle occupants killed in crashes, 2012 & 2014. 2012 Source: Fatality Analysis Reporting System (FARS). 2014 Source: National Highway Traffic Safety Administration's (NHTSA) Fatality Analysis Reporting System (FARS), 2014 Annual Report File Note: Blank cells indicate data are suppressed. Fatality rates based on fewer than 20 deaths are suppressed.",
+ "title": "Motor Vehicle Occupant Death Rate, by Age and Gender, 2012 & 2014, All States",
+ "programCode": ["009:020"],
+ "distribution": [{
+   "@type": "dcat:Distribution",
+   "downloadURL": "https://data.cdc.gov/api/views/rqg5-mkef/rows.csv?accessType=DOWNLOAD",
+   "mediaType": "text/csv"
+ }, {
+   "@type": "dcat:Distribution",
+   "downloadURL": "https://data.cdc.gov/api/views/rqg5-mkef/rows.rdf?accessType=DOWNLOAD",
+   "mediaType": "application/rdf+xml"
+ }, {
+   "@type": "dcat:Distribution",
+   "downloadURL": "https://data.cdc.gov/api/views/rqg5-mkef/rows.json?accessType=DOWNLOAD",
+   "mediaType": "application/json"
+ }, {
+   "@type": "dcat:Distribution",
+   "downloadURL": "https://data.cdc.gov/api/views/rqg5-mkef/rows.xml?accessType=DOWNLOAD",
+   "mediaType": "application/xml"
+ }],
+ "theme": ["geospatial"]
+}
+          </pre>
         </div>
         <div id="data-manifest-wrapper" class="usa-width-one-half">
-          <code id="data-manifest">
-            <xml>Stuff</xml>
-          </code>
+          <pre id="data-manifest">
+{
+   "@type": "dcat:Dataset",
+   "accessLevel": "public",
+   "contactPoint": {
+       "@type": "vcard:Contact",
+       "fn": "CDC INFO",
+       "hasEmail": "mailto:cdcinfo@cdc.gov"
+   },
+   "description": "Rate of deaths by age/gender (per 100,000 population) for motor vehicle occupants killed in crashes, 2012 & 2014. 2012 Source: Fatality Analysis Reporting System (FARS). 2014 Source: National Highway Traffic Safety Administration's (NHTSA) Fatality Analysis Reporting System (FARS), 2014 Annual Report File Note: Blank cells indicate data are suppressed. Fatality rates based on fewer than 20 deaths are suppressed.",
+   "distribution": [{
+       "@type": "dcat:Distribution",
+       "accessURL": "https://data.cdc.gov/resource/6ce7-3zab.json",
+       "format": "JSON",
+       "mediaType": "application/json",
+       "title": "JSON"
+   }, {
+       "@type": "dcat:Distribution",
+       "accessURL": "https://data.cdc.gov/resource/6ce7-3zab.geojson",
+       "format": "GeoJSON",
+       "mediaType": "application/vnd.geo+json",
+       "title": "GeoJSON"
+   }, {
+       "@type": "dcat:Distribution",
+       "downloadURL": "https://data.cdc.gov/resource/6ce7-3zab.xml",
+       "format": "GeoJSON",
+       "mediaType": "application/vnd.geo+json",
+       "title": "GeoJSON"
+   }, {
+       "@type": "dcat:Distribution",
+       "downloadURL": "https://data.cdc.gov/resource/6ce7-3zab.csv",
+       "format": "CSV",
+       "mediaType": "text/csv",
+       "title": "CSV"
+   }, {
+       "@type": "dcat:Distribution",
+       "downloadURL": "https://data.cdc.gov/resource/6ce7-3zab.rdf",
+       "format": "KML",
+       "mediaType": "application/vnd.google-earth.kml+xml",
+       "title": "KML"
+   }],
+   "identifier": "https://data.cdc.gov/api/views/rqg5-mkef"",
+   "issued": "2016-10-17",
+   "keyword": ["death rate", "motor vehicle"],
+   "landingPage": "https://data.cdc.gov/d/rqg5-mkef",
+   "modified": "2018-04-25T13:35:06.485Z",
+   "theme": ["geospatial"]
+}
+          </pre>
         </div>
       </div>
     </div>
@@ -132,11 +219,11 @@
           <div class="usa-width-one-third">
             <div class="usa-footer-primary-content usa-footer-contact_info">
               <p>
-                <a href="tel:1-800-555-5555">(800) CALL-GOVT</a>
+                <a href="tel:1-800-555-5555">(800) USA-CDCP</a>
               </p>
             </div>
             <div class="usa-footer-primary-content usa-footer-contact_info">
-              <p><a href="mailto:info@agency.gov">info@cdc.gov</a></p>
+              <p><a href="mailto:info@cdc.gov">info@cdc.gov</a></p>
             </div>
           </div>
         </address>
@@ -146,7 +233,7 @@
     <div class="usa-footer-secondary_section">
       <div class="usa-grid">
         <div class="usa-footer-logo">
-          <svg id="masthead-homepage" width="670" height="90" class="d-none d-lg-block logo-large" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg id="masthead-homepage" width="400" height="90" class="d-none d-lg-block logo-large" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <svg viewBox="64.205 258.667 670.865 89.614" width="100%" height="100%">
               <g>
                 <g>
