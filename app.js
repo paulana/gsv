@@ -14,11 +14,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
-
 app.post('/describe', function (req, res) {
   var url = req.url;
   res.send(JSON.stringify(describe.generate(url)));
@@ -26,6 +21,12 @@ app.post('/describe', function (req, res) {
 
 app.post('/manifest', function (req, res) {
   var url = req.url;
+  res.send(url);
+});
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
 // error handler
@@ -36,7 +37,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send(JSON.stringify(err));
 });
 
 module.exports = app;
