@@ -5,10 +5,6 @@ html, body {
   height: 100%;
 }
 
-#masthead-homepage{
-  margin: 2rem 0;
-}
-
 h1.usa-heading{
   display: inline;
 }
@@ -19,11 +15,11 @@ h1.usa-heading{
 
 .page{
   display: none;
+  padding-top: 2rem;
 }
 
 #page-data{
   display: block;
-  padding-top: 2rem;
 }
 
 .inputfile {
@@ -58,6 +54,9 @@ h1.usa-heading{
 
 #data-report-wrapper, #data-manifest-wrapper{
   display: none;
+  background: lightgray;
+  padding: 10px;
+  font-size: small;
 }
 
 footer {
@@ -65,4 +64,8 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.usa-footer-secondary_section{
+  padding: 0 !important;
 }

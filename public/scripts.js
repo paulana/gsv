@@ -12377,35 +12377,35 @@ $(function(){
       method: 'POST',
       success: function(response){
         $('#response-loading').slideUp();
-        console.log(response);
-        $('#data-report').html(response).parent().slideDown();
+        $('#data-report').html(response.responseText).parent().slideDown();
       },
       error: function(xhr, status, text){
         $('#response-loading').slideUp();
-        var re = $('#response-error');
-        re.find('.usa-alert-heading').text(status);
-        re.find('.usa-alert-text').text(text);
-        re.slideDown();
+        $('#data-report').parent().slideDown();
+        // var re = $('#response-error');
+        // re.find('.usa-alert-heading').text(status);
+        // re.find('.usa-alert-text').text(text);
+        // re.slideDown();
       }
     });
 
-    // $.ajax({
-    //   url: '/manifest',
-    //   data: {'url': url}
-    //   method: 'POST',
-    //   success: function(response){
-    //     $('#response-loading').slideUp();
-    //     console.log(response);
-    //     $('#data-manifest').html(response).parent().slideDown();
-    //   },
-    //   error: function(xhr, status, text){
-    //     $('#response-loading').slideUp();
-    //     var re = $('#response-error');
-    //     re.find('.usa-alert-heading').text(status);
-    //     re.find('.usa-alert-text').text(text);
-    //     re.slideDown();
-    //   }
-    // });
+    $.ajax({
+      url: '/manifest',
+      data: {'url': url},
+      method: 'POST',
+      success: function(response){
+        $('#response-loading').slideUp();
+        $('#data-manifest').html(response.responseText).parent().slideDown();
+      },
+      error: function(xhr, status, text){
+        $('#response-loading').slideUp();
+        $('#data-manifest').parent().slideDown();
+        // var re = $('#response-error');
+        // re.find('.usa-alert-heading').text(status);
+        // re.find('.usa-alert-text').text(text);
+        // re.slideDown();
+      }
+    });
   });
 });
 
