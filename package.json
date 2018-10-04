@@ -14,18 +14,18 @@
     "@fortawesome/fontawesome-free": "^5.3.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "http-server": "^0.11.1",
     "jade": "~1.11.0",
     "jquery": "^3.3.1",
     "morgan": "~1.9.0",
+    "npx": "^10.2.0",
     "uswds": "^1.6.8"
   },
   "devDependencies": {
     "browserify": "^16.2.3",
     "browserify-css": "^0.14.0",
-    "express": "~4.16.0"
+    "express": "^4.16.3"
   },
   "browserify-css": {
     "autoInject": true,

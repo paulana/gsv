@@ -26,7 +26,6 @@ app.post('/describe', function (req, res) {
 
 app.post('/manifest', function (req, res) {
   var url = req.url;
-
 });
 
 // error handler
