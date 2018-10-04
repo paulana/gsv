@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var describe = require('describe');
-var manifest = require('manifest');
+var describe = require('./describe');
+var manifest = require('./manifest');
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.post('/describe', function (req, res) {
 
 app.post('/manifest', function (req, res) {
   var url = req.url;
-  
+
 });
 
 // error handler
