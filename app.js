@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -13,14 +14,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json());
 
 app.post('/describe', function (req, res) {
-  var url = req.url;
-  res.send(JSON.stringify(describe.generate(url)));
+  var url = req.body.url;
+  console.log(req.body.url);
+  res.send(describe(url));
 });
 
 app.post('/manifest', function (req, res) {
-  var url = req.url;
+  var url = req.body.url;
   res.send(url);
 });
 

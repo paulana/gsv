@@ -3,23 +3,23 @@ function generate(url) {
     var pieces = url.split("/");
     var identifier = "https://data.cdc.gov/d/" + pieces[pieces.length - 1];
     var data;
+    console.log(identifier);
 
-    var request = new XMLHttpRequest();
+    var req = new XMLHttpRequest();
 
-    req.open("GET", endpoint, true);
-    req.onreadystatechange = function () {
-        if (req.readyState == XMLHttpRequest.DONE) {
-            if (req.status == 200) {
-                data = JSON.parse(req.responseText);
-            }
-        }
-    }
-    req.send();
+    req.open("GET", endpoint);
+    req.addEventListener("load", function () {
+        data = JSON.parse(req.responseText);
+        console.log(data);
 
-    var output;
-    data.dataset.forEach(function (d) {
-        if (d.landingPage = identifier) output = d;
+        var output;
+        data.dataset.forEach(function (d) {
+            if (d.landingPage == identifier) output = d;
+        });
+
+        return output;
     });
-
-    return output;
+    req.send();
 }
+
+module.exports = generate;

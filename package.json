@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
+    "body-parser": "^1.18.3",
     "browserify": "^16.2.3",
     "browserify-css": "^0.14.0",
     "cookie-parser": "~1.4.3",
