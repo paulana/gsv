@@ -9,6 +9,10 @@ html, body {
   margin: 2rem 0;
 }
 
+h1.usa-heading{
+  display: inline;
+}
+
 #main-content{
   height: calc(100% - 363px);
 }
@@ -19,6 +23,7 @@ html, body {
 
 #page-data{
   display: block;
+  padding-top: 2rem;
 }
 
 .inputfile {
@@ -47,7 +52,11 @@ html, body {
   outline: -webkit-focus-ring-color auto 5px;
 }
 
-#response-success, #response-warning, #response-error{
+#response-loading, #response-error{
+  display: none;
+}
+
+#data-report-wrapper, #data-manifest-wrapper{
   display: none;
 }
 
