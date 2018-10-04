@@ -1,7 +1,7 @@
 function generate(url) {
     var endpoint = "https://data.cdc.gov/data.json"
     var pieces = url.split("/");
-    var identifier = "https://data.cdc.gov/d/" + pieces[pieces.lngth - 1];
+    var identifier = "https://data.cdc.gov/d/" + pieces[pieces.length - 1];
     var data;
 
     var request = new XMLHttpRequest();
