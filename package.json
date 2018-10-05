@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm public/styles.js public/scripts.js",
     "build": "browserify src/index.js -o public/scripts.js && browserify -t browserify-css src/index.css -o public/styles.js",
-    "start": "npm i && node ./bin/www",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
