@@ -1,25 +1,10 @@
-# The Task
+# The Problem
 
-## Create Open Dataset for open.cdc.gov
+CDC posts its public, open datasets on open.cdc.gov.  These datasets then migrate to data.gov and if they are annotated as geospatially aware datasets, they then migrate to geoplatform.gov.  Many of CDC's geospatial datasets have not been identified properly and therefore never properly make it geoplatform.gov.  Datasets on geoplatform.gov are used by GIS analysts around the world for in depth GIS analyst on public data.  
 
-1. Enrich Datasets with Geospatial Information
-2. Fake HIV Demography
+# The Solution
 
-## Create an FOSS Project for open.cdc.gov
-
-1. Demography generator
-
-## Create an open API for open.cdc.gov
-
-1. Demography Generator
-
-## Contribute a Foundational Service for CDC Internal
-
-1. ?
-
-## Whatever
-
-1. ?
+This tool scans through a dataset provided that is currently on open.cdc.gov, identifies if it contains geospatial data then provides a properly annotated data manifest that identifies all of the geospatial file formats available and resubmits it to open.cdc.gov.  In the future it will be able to automatically scan through all datasets on open.cdc.gov and fix any outstanding datasets.  It can also become a tool for data managers to use before submitting to open.cdc.gov to provide better data manifests before the datasets are submitted.  These datasets will then become readily available to GIS programs around the world who want to leverage CDC's mass amount of publicly available data in more robust analytic capabilities.
 
 # Rules
 
